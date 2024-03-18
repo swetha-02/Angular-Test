@@ -1,0 +1,62 @@
+<form class="form-group" id="bookingForm" #bookingForm="ngForm">
+    <p>Location:</p>
+    <select id="location" name="location" [(ngModel)]="location" required>
+        <option value="Chennai">Chennai</option>
+        <option value="Salem">Salem</option>
+        <option value="Coimbatore">Coimbatore</option>
+    </select>
+    <div id="show" name="show" *ngIf="location==='Chennai'">   
+        <p>Movies list:</p>
+        <select id="movie" name="movie" [(ngModel)]="movie" required>
+        <option value="Maya">Maya</option>
+        <option value="Mariyan"> Mariyan</option>
+        <option value="DDLJ">DDLJ</option></select>
+        <p>Theatre list:</p>
+        <select id="theatre" name="theatre" [(ngModel)]="theatre" required>
+        <option value="Theatre 4">Theatre 4</option>
+        <option value="Theatre 5"> Theatre 5</option>
+        <option value="Theatre 6">Theatre 6</option></select>
+        <p>Timings:</p>
+        <select id="timing" name="timing" [(ngModel)]="timing" required>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="1:00 PM"> 1:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option></select>
+    </div>
+    <div id="show" name="show" *ngIf="location==='Salem'">   
+        <p>Movies list:</p>
+        <select id="movie" name="movie" [(ngModel)]="movie" required>
+        <option value="Friends">Friends</option>
+        <option value="Life Goes On"> Life Goes On</option>
+        <option value="No">No</option></select>
+        <p>Theatre list:</p>
+        <select id="theatre" name="theatre" [(ngModel)]="theatre" required>
+        <option value="Theatre 1">Theatre 1</option>
+        <option value="Theatre 2"> Theatre 2</option>
+        <option value="Theatre 1">Theatre 3</option></select>
+        <p>Timings:</p>
+        <select id="timing" name="timing" [(ngModel)]="timing" required>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value=" 1:00 PM"> 1:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option></select>
+    </div>
+    <div id="show" name="show" *ngIf="location==='Coimbatore'">   
+        <p>Movies list:</p>
+        <select id="movie" name="movie" [(ngModel)]="movie" required>
+        <option value="Premam">Premam</option>
+        <option value="Harry Potter"> Harry Potter</option>
+        <option value="Vampire Diaries">Vampire Diaries</option></select><br>
+        <p>Theatre list:</p>
+        <select id="theatre" name="theatre" [(ngModel)]="theatre" required>
+        <option value="Theatre 7">Theatre 7</option>
+        <option value="Theatre 8"> Theatre 8</option>
+        <option value="Theatre 9">Theatre 9</option></select>
+        <p>Timings:</p>
+        <select id="timing" name="timing" [(ngModel)]="timing" required>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="1:00 PM"> 1:00 PM</option>
+        <option value="6:00 PM ">6:00 PM </option></select>
+    </div>
+    <br>
+    <br>
+    <button type="submit" name="button" (click)="onSubmit()">Submit</button>
+</form>
